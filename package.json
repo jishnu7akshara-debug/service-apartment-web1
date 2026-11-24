@@ -1,0 +1,9 @@
+{
+  "name": "northlight-residences",
+  "version": "1.0.0",
+  "description": "Northlight Residences - serviced apartments (Service Apartment Web Two)",
+  "scripts": {
+    "build": "node build.js",
+    "start": "npx serve ."
+  }
+}

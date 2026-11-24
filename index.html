@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Northlight Residences | Serviced apartments in Bengaluru, by the night or the year</title>
+<meta name="description" content="Fully serviced studio, one- and two-bedroom apartments in Whitefield, Koramangala and Hebbal. Weekly housekeeping, fibre internet, one monthly GST invoice for companies." />
+<meta name="theme-color" content="#E8E9E5" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/video/tour-film-poster.jpg" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__count"><span data-count>0</span><small>nights</small></div>
+  <div class="loader__bar"><span></span></div>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Northlight Residences home">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <defs>
+        <linearGradient id="nl-brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#2B4C8C"/>
+          <stop offset="100%" stop-color="#162A50"/>
+        </linearGradient>
+      </defs>
+      <rect width="32" height="32" rx="8" fill="url(#nl-brand-grad)"/>
+      <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" stroke="rgba(250,250,248,0.2)" stroke-width="1.5"/>
+      <path d="M8 22V10L18.5 22V10" fill="none" stroke="#FAFAF8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M23.5 4.5 C23.5 6.3 24.7 7.5 26.5 7.5 C24.7 7.5 23.5 8.7 23.5 10.5 C23.5 8.7 22.3 7.5 20.5 7.5 C22.3 7.5 23.5 6.3 23.5 4.5 Z" fill="#E0A93B"/>
+      <circle cx="23.5" cy="7.5" r="0.6" fill="#FFFFFF"/>
+    </svg>
+    <span>Northlight</span>
+  </a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="#apartments">Apartments</a>
+    <a href="#day">A weekday here</a>
+    <a href="#areas">Locations</a>
+    <a href="#companies">For companies</a>
+    <a href="#faq">Questions</a>
+  </nav>
+  <a class="btn btn--ink nav__cta" href="#enquire">Get a quote</a>
+  <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+</header>
+<div class="drawer" id="drawer" hidden>
+  <a href="#apartments">Apartments</a><a href="#day">A weekday here</a><a href="#areas">Locations</a><a href="#companies">For companies</a><a href="#faq">Questions</a>
+  <a class="btn btn--brass" href="#enquire">Get a quote</a>
+</div>
+
+<main id="main">
+
+<!-- HERO: the stay calculator is the hero -->
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <h1 class="hero__title">
+        <span class="ln"><span>Furnished apartments</span></span>
+        <span class="ln"><span>in Bengaluru, by the</span></span>
+        <span class="ln"><span>night or by the year.</span></span>
+      </h1>
+      <p class="hero__lede">Studios, one- and two-bedroom apartments in Whitefield, Koramangala and Hebbal. Kitchen, washer, fibre and housekeeping included. The longer you stay, the less each night costs.</p>
+    </div>
+
+    <form class="calc" data-calc aria-labelledby="calc-title">
+      <h2 class="calc__title" id="calc-title">How long are you staying?</h2>
+      <div class="calc__length">
+        <output class="calc__len" data-out="len">1 month</output>
+        <input class="calc__range" type="range" min="0" max="15" step="1" value="8" aria-label="Length of stay" data-in="len" />
+        <div class="calc__ticks" aria-hidden="true"><span>1 night</span><span>1 week</span><span>1 month</span><span>3 months</span><span>1 year</span></div>
+      </div>
+      <div class="calc__row">
+        <fieldset class="seg" data-in="type">
+          <legend class="sr-only">Apartment</legend>
+          <label><input type="radio" name="type" value="studio" checked /><span>Studio</span></label>
+          <label><input type="radio" name="type" value="one" /><span>1 bedroom</span></label>
+          <label><input type="radio" name="type" value="two" /><span>2 bedroom</span></label>
+        </fieldset>
+        <label class="calc__select"><span class="sr-only">Location</span>
+          <select name="area" data-in="area">
+            <option value="whitefield">Whitefield</option>
+            <option value="koramangala">Koramangala</option>
+            <option value="hebbal">Hebbal</option>
+          </select>
+        </label>
+      </div>
+      <div class="calc__result">
+        <div><span class="calc__k">Per night</span><strong class="calc__v" data-out="night">₹3,640</strong></div>
+        <div><span class="calc__k" data-out="totalLabel">Per month</span><strong class="calc__v" data-out="total">₹1,09,200</strong></div>
+        <div class="calc__save" data-out="save">35% off the nightly rate</div>
+      </div>
+      <ul class="calc__incl" data-out="incl" aria-live="polite"></ul>
+      <a class="btn btn--brass calc__go" href="#enquire" data-quote>Hold this quote</a>
+      <p class="calc__fine">Indicative rates before GST. Final price depends on dates and floor.</p>
+    </form>
+  </div>
+
+  <div class="frame" data-frame>
+    <video class="frame__video" autoplay muted loop playsinline preload="auto" poster="assets/video/tour-film-poster.jpg">
+      <source src="assets/video/tour-film.mp4" type="video/mp4" />
+    </video>
+    <p class="frame__cap">Inside a one-bedroom at Koramangala</p>
+  </div>
+</section>
+
+<!-- EVERY APARTMENT -->
+<section class="every">
+  <div class="wrap every__grid">
+    <h2 class="h2" data-lines>Every apartment comes ready on the day you land.</h2>
+    <ul class="every__list">
+      <li><strong>Full kitchen</strong><span>Hob, microwave, fridge, cookware for four</span></li>
+      <li><strong>Washer and dryer</strong><span>In the apartment, not down the hall</span></li>
+      <li><strong>300 Mbps fibre</strong><span>With a backup line and a proper desk</span></li>
+      <li><strong>Housekeeping</strong><span>Daily for short stays, twice a week after 30 nights</span></li>
+      <li><strong>Power backup</strong><span>Whole apartment, including the AC</span></li>
+      <li><strong>24-hour desk</strong><span>Parcels, keys, cabs and anything that breaks</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- APARTMENTS: stacking cards -->
+<section class="apts" id="apartments">
+  <div class="wrap">
+    <h2 class="h2 apts__h">Three sizes, same standard</h2>
+  </div>
+  <div class="wrap stack">
+    <article class="card" style="--bg:#FAFAF8">
+      <div class="card__media">
+        <img class="card__main" src="assets/img/studio-long.jpg" alt="Long studio apartment with a bed, a sofa by the window and a television unit" loading="lazy" />
+        <img class="card__inset" src="assets/img/studio-white.jpg" alt="Bright studio corner with a white desk and a lamp" loading="lazy" />
+      </div>
+      <div class="card__body">
+        <h3>Studio</h3>
+        <p>One room done properly: queen bed, a desk that faces the window, a kitchenette with a full-size fridge. For one person on a project, or two who don't mind sharing a desk.</p>
+        <dl class="card__specs"><div><dt>Size</dt><dd>420 sq ft</dd></div><div><dt>Sleeps</dt><dd>2</dd></div><div><dt>From</dt><dd>₹2,310/night on 3 months</dd></div></dl>
+        <a class="link" href="#top" data-pick="studio">Price a studio</a>
+      </div>
+    </article>
+    <article class="card" style="--bg:#F1F2EE">
+      <div class="card__media">
+        <img class="card__main" src="assets/img/living-balcony.jpg" alt="Living room with a tan sofa, a coffee table and doors to a balcony" loading="lazy" />
+        <img class="card__inset" src="assets/img/bedroom-window.jpg" alt="Bedroom with a large window, white bedding and patterned cushions" loading="lazy" />
+      </div>
+      <div class="card__body">
+        <h3>One bedroom</h3>
+        <p>A separate bedroom with blackout blinds, a living room with a balcony, and a dining table that seats four. Our most booked apartment for relocations.</p>
+        <dl class="card__specs"><div><dt>Size</dt><dd>680 sq ft</dd></div><div><dt>Sleeps</dt><dd>2 + 1</dd></div><div><dt>From</dt><dd>₹3,080/night on 3 months</dd></div></dl>
+        <a class="link" href="#top" data-pick="one">Price a one-bedroom</a>
+      </div>
+    </article>
+    <article class="card" style="--bg:#E3E8EE">
+      <div class="card__media">
+        <img class="card__main" src="assets/img/kitchen-dining.jpg" alt="Open-plan kitchen and dining area with a long table and grey cabinets" loading="lazy" />
+        <img class="card__inset" src="assets/img/dining-teal.jpg" alt="Dining table with teal chairs beside a wood-panelled wall" loading="lazy" />
+      </div>
+      <div class="card__body">
+        <h3>Two bedroom</h3>
+        <p>Two en-suite bedrooms either side of an open kitchen. Families moving city, or two colleagues on the same project who'd rather not share a bathroom.</p>
+        <dl class="card__specs"><div><dt>Size</dt><dd>1,050 sq ft</dd></div><div><dt>Sleeps</dt><dd>4 + 1</dd></div><div><dt>From</dt><dd>₹4,345/night on 3 months</dd></div></dl>
+        <a class="link" href="#top" data-pick="two">Price a two-bedroom</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- A WEEKDAY: timeline (genuinely a sequence) -->
+<section class="day" id="day">
+  <div class="wrap">
+    <h2 class="h2" data-lines>A weekday at Northlight</h2>
+    <p class="day__intro">What staying here actually looks like when you're in town for work.</p>
+  </div>
+  <div class="wrap timeline">
+    <span class="timeline__line" aria-hidden="true"><span></span></span>
+    <article class="tl" data-side="left">
+      <time>7:30</time>
+      <div class="tl__img"><img src="assets/img/breakfast.jpg" alt="Breakfast tray with toast and orange juice on a patterned bedspread" loading="lazy" /></div>
+      <div class="tl__txt"><h3>Breakfast you didn't have to shop for</h3><p>Tell the desk what you like on day one and the fridge is stocked before you arrive. Billed at shop prices.</p></div>
+    </article>
+    <article class="tl" data-side="right">
+      <time>9:00</time>
+      <div class="tl__img"><img src="assets/img/workspace.jpg" alt="Desk by a window with a large monitor, bookshelves and a lamp" loading="lazy" /></div>
+      <div class="tl__txt"><h3>Calls from a real desk</h3><p>Every apartment has a desk, a proper chair and fibre on two providers. Ask for a second monitor; we keep a few.</p></div>
+    </article>
+    <article class="tl" data-side="left">
+      <time>13:00</time>
+      <div class="tl__img"><img src="assets/img/cowork.jpg" alt="Shared work lounge with glass walls, chairs and a long counter" loading="lazy" /></div>
+      <div class="tl__txt"><h3>Meet the team downstairs</h3><p>The ground-floor work lounge has two bookable meeting rooms and coffee that isn't from a machine.</p></div>
+    </article>
+    <article class="tl" data-side="right">
+      <time>18:30</time>
+      <div class="tl__img"><img src="assets/img/rooftop-pool.jpg" alt="Rooftop infinity pool looking out over high-rise buildings and trees" loading="lazy" /></div>
+      <div class="tl__txt"><h3>Swim before the traffic clears</h3><p>Rooftop pool at Whitefield and Hebbal, gym in all three buildings, open from 5 am to 11 pm.</p></div>
+    </article>
+    <article class="tl" data-side="left">
+      <time>22:00</time>
+      <div class="tl__img"><img src="assets/img/city-night.jpg" alt="Bengaluru skyline at night with lit towers" loading="lazy" /></div>
+      <div class="tl__txt"><h3>Quiet, blackout blinds, done</h3><p>Double-glazed windows on every floor. Housekeeping comes while you're out tomorrow.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- LOCATIONS: pinned horizontal -->
+<section class="areas" id="areas">
+  <div class="areas__pin">
+    <div class="wrap areas__head">
+      <h2 class="h2">Three buildings, close to where you work</h2>
+      <p class="areas__hint">Drive times at 9 am on a weekday, from Google Maps averages.</p>
+    </div>
+    <div class="areas__track">
+      <article class="area">
+        <img src="assets/img/building-curve.jpg" alt="Curved modern residential building with a glass stair tower" loading="lazy" />
+        <div class="area__body">
+          <h3>Whitefield</h3>
+          <p>Off ITPL Main Road. 64 apartments, rooftop pool, work lounge.</p>
+          <ul><li><b>ITPL</b> 8 min</li><li><b>EPIP Zone</b> 12 min</li><li><b>Whitefield metro</b> 6 min</li></ul>
+        </div>
+      </article>
+      <article class="area">
+        <img src="assets/img/living-cityview.jpg" alt="Living room with armchairs and floor-to-ceiling windows over the city" loading="lazy" />
+        <div class="area__body">
+          <h3>Koramangala</h3>
+          <p>5th Block, two streets from the restaurants. 38 apartments, gym, work lounge.</p>
+          <ul><li><b>Outer Ring Road</b> 15 min</li><li><b>HSR Layout</b> 10 min</li><li><b>MG Road</b> 25 min</li></ul>
+        </div>
+      </article>
+      <article class="area">
+        <img src="assets/img/rooftop-pool-2.jpg" alt="Rooftop pool beside a small pavilion, with towers in the distance" loading="lazy" />
+        <div class="area__body">
+          <h3>Hebbal</h3>
+          <p>Near the flyover, on the airport side. 52 apartments, rooftop pool, gym.</p>
+          <ul><li><b>Manyata Tech Park</b> 10 min</li><li><b>Kempegowda Airport</b> 35 min</li><li><b>Kirloskar Business Park</b> 6 min</li></ul>
+        </div>
+      </article>
+      <article class="area area--video">
+        <video autoplay muted loop playsinline preload="none" poster="assets/img/city-day.jpg">
+          <source src="assets/video/city.mp4" type="video/mp4" />
+        </video>
+        <div class="area__body">
+          <h3>Not sure which?</h3>
+          <p>Send us your office address and we'll tell you which building has the shortest commute.</p>
+          <a class="btn btn--brass" href="#enquire">Ask us</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES bento -->
+<section class="bento-sec">
+  <div class="wrap">
+    <h2 class="h2" data-lines>Downstairs and upstairs</h2>
+    <div class="bento">
+      <figure class="b b--a"><div class="b__img"><img src="assets/img/lobby.jpg" alt="Reception with a marble counter and chandeliers" loading="lazy" data-par /></div><figcaption>24-hour front desk</figcaption></figure>
+      <figure class="b b--b"><div class="b__img"><img src="assets/img/gym.jpg" alt="Gym with treadmills and weight machines by large windows" loading="lazy" data-par /></div><figcaption>Gym in every building</figcaption></figure>
+      <figure class="b b--c"><div class="b__img"><img src="assets/img/cowork-plant.jpg" alt="Plant on a desk in a bright shared workspace" loading="lazy" data-par /></div><figcaption>Work lounge and two meeting rooms</figcaption></figure>
+      <figure class="b b--d"><div class="b__img"><video autoplay muted loop playsinline preload="none" poster="assets/img/bedroom-desk.jpg" data-par><source src="assets/video/room.mp4" type="video/mp4" /></video></div><figcaption>Housekeeping</figcaption></figure>
+      <figure class="b b--e"><div class="b__img"><img src="assets/img/kitchen-white.jpg" alt="White kitchen with an island, bar stools and pendant lights" loading="lazy" data-par /></div><figcaption>Kitchens you'll actually cook in</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANIES -->
+<section class="companies" id="companies">
+  <div class="wrap companies__grid">
+    <div>
+      <h2 class="h2 h2--light" data-lines>Housing a team, or relocating someone?</h2>
+      <p class="companies__lede">We work with HR, travel desks and project managers on stays from two weeks to two years. One contract, one contact, one invoice.</p>
+    </div>
+    <ul class="checks">
+      <li><b>One GST invoice a month</b> for every apartment on your account, with each guest itemised.</li>
+      <li><b>Leave with 7 days' notice</b> on stays over 30 nights. No lock-in on projects that end early.</li>
+      <li><b>A named account manager</b> who answers on WhatsApp during working hours.</li>
+      <li><b>Pre-arrival setup</b>: groceries, SIM card, airport pickup, all on the same invoice.</li>
+      <li><b>Hold apartments</b> for a team arriving in waves, at the rate of the longest stay.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap faq__grid">
+    <h2 class="h2">Questions people ask first</h2>
+    <div class="faq__list">
+      <details>
+        <summary>What's the shortest stay?</summary>
+        <p>One night. Nightly rates drop at 7, 30 and 90 nights, and the calculator at the top shows exactly where.</p>
+      </details>
+      <details>
+        <summary>Are electricity and internet included?</summary>
+        <p>Yes, up to a fair-use limit of 300 units of electricity a month on one-bedrooms and 450 on two-bedrooms. Internet is unlimited.</p>
+      </details>
+      <details>
+        <summary>Can I check in late at night?</summary>
+        <p>Any time. The desk is staffed around the clock, and we track your flight if you send us the number.</p>
+      </details>
+      <details>
+        <summary>Do you need a deposit?</summary>
+        <p>For personal stays over 30 nights, one month's rent, refunded within 7 days of checkout. Company accounts don't pay deposits.</p>
+      </details>
+      <details>
+        <summary>Can I bring a pet?</summary>
+        <p>Small dogs and cats are welcome at Whitefield and Hebbal, with a one-time cleaning fee of ₹3,000.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRE -->
+<section class="enquire" id="enquire">
+  <div class="wrap enquire__grid">
+    <div class="enquire__img" data-reveal="left"><video autoplay muted loop playsinline preload="none" poster="assets/img/living-evening.jpg"><source src="assets/video/view.mp4" type="video/mp4" /></video></div>
+    <form class="enquire__form" data-enquire>
+      <h2 class="h2">Get a quote in an hour</h2>
+      <p class="enquire__sum" data-quote-summary>Tell us when you're coming and we'll send rates for the apartments that are free.</p>
+      <label><span>Your name</span><input name="name" required autocomplete="name" /></label>
+      <label><span>Phone or WhatsApp</span><input name="phone" required inputmode="tel" autocomplete="tel" /></label>
+      <div class="enquire__two">
+        <label><span>Arriving</span><input name="in" type="date" required /></label>
+        <label><span>Staying for</span><input name="len" placeholder="e.g. 3 months" /></label>
+      </div>
+      <label><span>Company (optional)</span><input name="company" autocomplete="organization" /></label>
+      <button class="btn btn--ink" type="submit">Send on WhatsApp</button>
+      <p class="enquire__note" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div><p class="foot__brand">Northlight Residences</p><p>Serviced apartments in Whitefield, Koramangala and Hebbal, Bengaluru.</p></div>
+    <div class="foot__col"><a href="#apartments">Apartments</a><a href="#areas">Locations</a><a href="#companies">For companies</a><a href="#faq">Questions</a></div>
+    <div class="foot__col"><a href="tel:+919800000000">+91 98000 00000</a><a href="mailto:stay@northlight.in">stay@northlight.in</a><a href="https://wa.me/919800000000" rel="noopener">WhatsApp</a></div>
+  </div>
+  <p class="wrap foot__fine">© <span data-year></span> Northlight Residences. Photographs and footage: see CREDITS.md.</p>
+</footer>
+</body>
+</html>
